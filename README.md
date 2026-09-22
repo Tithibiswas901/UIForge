@@ -1,32 +1,101 @@
-# React + TypeScript + Vite
+<div align="center">
+  
+# 🔨 UIForge
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**The Ultimate React Component Playground for 10x Developers.**
 
-Currently, two official plugins are available:
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://ui-forge-ten.vercel.app/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)]()
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)]()
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)]()
+[![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)]()
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+</div>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚡ Overview
 
-## Expanding the Oxlint configuration
+**UIForge** is a god-tier, zero-backend interactive component playground engineered for absolute control. Stop guessing how your React components will behave in edge cases and stop wrestling with bloated storybooks. 
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+With UIForge, you can mutate props in real-time, validate WCAG accessibility constraints dynamically, and instantly export battle-tested, production-ready `React + Tailwind CSS` code. 
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+**[Launch the Playground 🚀](https://ui-forge-ten.vercel.app/)**
+
+---
+
+## ✨ Features
+
+- 🔄 **Instant Feedback Loop**: Mutate props, toggle booleans, and inject raw strings in real-time. UIForge renders changes faster than you can blink.
+- 🛡️ **Flawless Accessibility (A11y)**: Built-in WCAG 2.1 AAA contrast validators, dynamic touch-target math, and live color-blindness simulators. Never ship an inaccessible component again.
+- 📱 **Omni-Responsive Canvas**: Test fluidity and layout constraints seamlessly inside a flexible, interactive sandbox.
+- 💻 **Copy, Paste, Ship**: No proprietary wrappers. UIForge generates pristine, zero-dependency TSX code reflecting your exact state, ready to drop straight into your monorepo.
+- 🎨 **Modern Aesthetics**: Built with glassmorphism, dynamic 3D-tilt interactions, animated particle networks, and glowing gradients.
+
+---
+
+## 🏗️ Tech Stack
+
+- **Framework**: React 18
+- **Build Tool**: Vite
+- **Language**: TypeScript (Strict Mode)
+- **Styling**: Tailwind CSS (Utility-first with custom CSS variables for theming)
+- **Icons**: Lucide React
+- **Deployment**: Vercel
+
+---
+
+## 🚀 Getting Started (Local Development)
+
+Want to run UIForge locally or add your own components to the registry?
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/UIForge.git
+
+# 2. Navigate into the directory
+cd UIForge
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the Vite development server
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Visit `http://localhost:5173` to see your local instance running!
+
+---
+
+## 🧪 Testing
+
+Robust UI requires rigorous testing. UIForge is built with reliability in mind.
+
+### Component & Unit Testing (Vitest + React Testing Library)
+Run standard unit assertions to ensure component correctness:
+```bash
+npm run test
+```
+*Validates Button clicks, Input error states, Modal ESC key trapping, and more.*
+
+### Automated Browser Testing (Playwright)
+Run the end-to-end integration suite to guarantee interactivity in a real browser environment:
+```bash
+npx playwright test
+```
+*Automated bots will assert prop mutations, focus trapping, and a11y keyboard navigation across all components.*
+
+---
+
+## 🤝 Contributing
+
+1. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+2. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Push to the Branch (`git push origin feature/AmazingFeature`)
+4. Open a Pull Request
+
+---
+
+<div align="center">
+  <p>Built with ❤️ for developers who ship.</p>
+</div>
