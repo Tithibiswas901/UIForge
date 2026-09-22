@@ -26,14 +26,20 @@ function App() {
 
     window.addEventListener('popstate', handleLocationChange);
 
-    // Also handle simple link clicks to avoid full page reload
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const anchor = target.closest('a');
+      
       if (anchor && anchor.href && anchor.href.startsWith(window.location.origin) && !anchor.target) {
+        const url = new URL(anchor.href);
+        
+        // If it's a hash link on the same page, let the browser handle the scroll natively
+        if (url.pathname === window.location.pathname && url.hash) {
+          return;
+        }
+
         e.preventDefault();
-        const path = new URL(anchor.href).pathname;
-        window.history.pushState(null, '', path);
+        window.history.pushState(null, '', url.pathname + url.search);
       }
     };
 

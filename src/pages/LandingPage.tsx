@@ -178,6 +178,91 @@ export function LandingPage() {
         </div>
       </section>
 
+      {/* Developer Documentation Section */}
+      <section id="developers" className="container mx-auto px-6 py-24 relative z-10">
+        <h2 className="text-4xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary">For Developers</h2>
+        
+        <div className="max-w-4xl mx-auto bg-slate-900/80 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-md shadow-2xl">
+          {/* Mac-like Window Header */}
+          <div className="bg-slate-950/80 px-4 py-3 flex items-center border-b border-white/10">
+            <div className="flex gap-2">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <div className="text-xs text-slate-500 font-mono flex-1 text-center font-semibold">uiforge-developer-guide.md</div>
+          </div>
+          
+          <div className="p-8 md:p-12 text-slate-300 space-y-8">
+            <p className="text-lg leading-relaxed text-slate-200">
+              UIForge isn't just a playground—it's a complete ecosystem designed to help you build, test, and ship resilient user interfaces. Here is how you extract maximum value from this toolset.
+            </p>
+
+            {/* Steps */}
+            <div className="space-y-6">
+              {/* Step 1 */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold">1</div>
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-2">Interactive Forging & A11y Validation</h4>
+                  <p className="leading-relaxed">
+                    Start in the Playground. Select a component, inject aggressive edge-case data, and force awkward states. UIForge immediately warns you if your color contrast fails WCAG AAA standards or if touch targets fall below iOS/Android requirements.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold">2</div>
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-2">Extract Clean TSX & Tailwind</h4>
+                  <p className="leading-relaxed">
+                    Once the component is perfected visually, switch to the <strong>Code</strong> tab. You will find absolutely pure, zero-dependency <code>React + Tailwind CSS</code> output. No NPM packages, no bloat. Just copy, paste, and it works.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold">3</div>
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-2">Component & Unit Testing <span className="ml-2 text-xs font-normal px-2 py-0.5 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">Vitest + RTL</span></h4>
+                  <p className="leading-relaxed mb-3">
+                    Robust UI requires rigorous unit tests. UIForge includes a pre-configured Vitest + React Testing Library suite for every component.
+                  </p>
+                  <ul className="list-disc list-inside text-sm text-slate-400 space-y-1 ml-2">
+                    <li>Validates <code>Button</code> fires <code>onClick</code> unless <code>disabled</code> is passed.</li>
+                    <li>Ensures <code>Input</code> displays proper error states when invalid.</li>
+                    <li>Asserts that <code>Modal</code> correctly unmounts when pressing the <code>ESC</code> key.</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center font-bold">4</div>
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-2">Automated Browser Testing <span className="ml-2 text-xs font-normal px-2 py-0.5 bg-green-500/20 text-green-300 rounded-full border border-green-500/30">Playwright</span></h4>
+                  <p className="leading-relaxed mb-3">
+                    We don't leave integration to chance. A comprehensive set of end-to-end Playwright tests run automatically in a real browser environment to guarantee interactivity:
+                  </p>
+                  <ul className="list-disc list-inside text-sm text-slate-400 space-y-1 ml-2">
+                    <li><strong className="text-slate-300">Prop Mutation:</strong> Selects components, changes props, and asserts the preview DOM updates correctly.</li>
+                    <li><strong className="text-slate-300">Keyboard Trapping:</strong> Opens the Modal, presses ESC, and verifies proper focus restoration.</li>
+                    <li><strong className="text-slate-300">A11y Navigation:</strong> Keyboard-tabs through form controls to assert focus rings are visible and functional.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-8 p-4 bg-primary/10 border border-primary/20 rounded-lg text-sm text-blue-200">
+              <strong className="text-primary font-bold">Pro-tip:</strong> Run <code>npm run test</code> for the Vitest suite and <code>npx playwright test</code> to watch the automated browser bots validate your UI in real-time.
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Footer CTA */}
       <section className="border-t border-white/10 bg-white/[0.02] relative z-10">
         <div className="container mx-auto px-6 py-24 text-center">
