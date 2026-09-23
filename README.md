@@ -72,18 +72,16 @@ Visit `http://localhost:5173` to see your local instance running!
 Robust UI requires rigorous testing. UIForge is built with reliability in mind.
 
 ### Component & Unit Testing (Vitest + React Testing Library)
-Run standard unit assertions to ensure component correctness:
+To run the unit tests, which verify individual component behavior, DOM rendering, and isolated state logic:
 ```bash
 npm run test
 ```
-*Validates Button clicks, Input error states, Modal ESC key trapping, and more.*
 
 ### Automated Browser Testing (Playwright)
-Run the end-to-end integration suite to guarantee interactivity in a real browser environment:
+To run the end-to-end tests, which validate the full playground UI flow, live preview updates, and cross-component interactions in a real browser:
 ```bash
-npx playwright test
+npm run e2e
 ```
-*Automated bots will assert prop mutations, focus trapping, and a11y keyboard navigation across all components.*
 
 ---
 

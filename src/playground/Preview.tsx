@@ -33,7 +33,9 @@ export const Preview: React.FC<PreviewProps> = ({ component, props, onRefChange,
         </defs>
       </svg>
       <div style={{ filter: filterStyle }} className="transition-all duration-300">
-        <Component ref={ref} {...props} />
+        <Component ref={ref} {...props}>
+          {props.label || props.children}
+        </Component>
       </div>
     </div>
   );
